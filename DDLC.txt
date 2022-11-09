@@ -1,0 +1,59 @@
+Data Definition Language Commands :
+
+1.CREATE Command
+2.ALTER Command
+3.DROP Command
+4.TRUNCATE Command
+5.RENAME Command
+
+CREATE 	:
+	Syntax	:
+		CREATE TABLE table_name
+		(
+		column_Name1 data_type ( size of the column),
+		column_Name2 data_type ( size of the column),
+		column_Name3 data_type ( size of the column),
+		...
+		column_NameN data_type ( size of the column)
+		);
+	Example	:
+		CREATE TABLE Student
+		(
+		Roll_No. Int,
+		First_Name Varchar (20),
+		Last_Name Varchar (20),
+		Age Int,
+		Marks Int,
+		);
+
+ALTER 	:
+	Syntax	:
+		ALTER TABLE name_of_table ADD column_name column_definition;
+		ALTER TABLE table_name MODIFY ( column_name column_datatype(size));
+		ALTER TABLE name_of_table DROP Column_Name_1 , column_Name_2 , ….., column_Name_N;
+	Example	:
+		ALTER TABLE Student ADD Father's_Name Varchar(60);
+		ALTER TABLE table_name MODIFY ( Last_Name varchar(25));
+		ALTER TABLE Student DROP Age, Marks;
+
+DROP	:
+	Syntax	:
+		DROP DATABASE Database_Name;
+		DROP TABLE Table_Name;
+		DROP INDEX Index_Name;
+	Example	:
+		DROP DATABASE Books;
+		DROP TABLE Student;
+		DROP INDEX Index_city;
+
+TRUNCATE:
+	Syntax	:
+		TRUNCATE TABLE Table_Name;
+	Example	:
+		TRUNCATE TABLE Student;
+
+RENAME	:
+	Syntax	:
+		RENAME TABLE Old_Table_Name TO New_Table_Name;
+	Example	:
+		RENAME TABLE Student TO Student_Details ;
